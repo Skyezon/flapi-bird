@@ -1,21 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccjgem3k25jf7"]
+[gd_scene load_steps=2 format=3 uid="uid://ccjgem3k25jf7"]
 
 [ext_resource type="Script" path="res://Scripts/PipeSpawner.gd" id="1_kqyic"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_tc4f0"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qadfi"]
 
 [node name="PipeSpawner" type="Marker2D"]
 script = ExtResource("1_kqyic")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
-autostart = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-scale = Vector2(15.36, 15.36)
-mesh = SubResource("BoxMesh_tc4f0")
-texture = SubResource("PlaceholderTexture2D_qadfi")
+wait_time = 2.5
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

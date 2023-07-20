@@ -2,6 +2,7 @@ extends Marker2D
 
 const Pipe := preload("res://Scenes/pipe.tscn")
 const offset_from_middle := 100 # should count from viewport size
+@onready var timer := $Timer
 
 func _on_timer_timeout():
 	spawn_pipes()
@@ -38,8 +39,8 @@ func _on_main_start_game():
 	start_game()
 
 func game_over():
-	$Timer.stop()
+	timer.stop()
 	
 func start_game():
-	$Timer.start()
+	timer.start()
 	
