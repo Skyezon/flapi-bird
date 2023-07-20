@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1lyw8hmur04v"]
+
+[ext_resource type="PackedScene" uid="uid://jj2g4a6ufgte" path="res://Scenes/player.tscn" id="1_ihdkw"]
+[ext_resource type="PackedScene" uid="uid://ccjgem3k25jf7" path="res://Scenes/pipe_spawner.tscn" id="2_kw820"]
+[ext_resource type="PackedScene" uid="uid://1wybuvxl71dm" path="res://Scenes/ground.tscn" id="3_dehay"]
+
+[node name="World" type="Node2D"]
+
+[node name="PipeSpawner" parent="." instance=ExtResource("2_kw820")]
+position = Vector2(971, 311)
+
+[node name="Ground" parent="." instance=ExtResource("3_dehay")]
+position = Vector2(505, 556)
+scale = Vector2(5.435, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ihdkw")]
+position = Vector2(354, 280)

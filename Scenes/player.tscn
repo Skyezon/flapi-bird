@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://jj2g4a6ufgte"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_iondq"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v3ckw"]
+resource_name = "Player Image"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rii6l"]
+size = Vector2(1, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(67.365, 67.365)
+collision_layer = 2
+collision_mask = 5
+motion_mode = 1
+script = ExtResource("1_iondq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_v3ckw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rii6l")

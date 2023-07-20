@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccjgem3k25jf7"]
+
+[ext_resource type="Script" path="res://Scripts/PipeSpawner.gd" id="1_kqyic"]
+
+[node name="PipeSpawner" type="Marker2D"]
+position = Vector2(354, 415)
+script = ExtResource("1_kqyic")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
