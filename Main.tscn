@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1lyw8hmur04v"]
+[gd_scene load_steps=5 format=3 uid="uid://b1lyw8hmur04v"]
 
+[ext_resource type="Script" path="res://Main.gd" id="1_hp8j3"]
 [ext_resource type="PackedScene" uid="uid://ccjgem3k25jf7" path="res://Scenes/pipe_spawner.tscn" id="2_kw820"]
 [ext_resource type="PackedScene" uid="uid://1wybuvxl71dm" path="res://Scenes/ground.tscn" id="3_dehay"]
+[ext_resource type="PackedScene" uid="uid://btnoeuwj3cq5j" path="res://Scenes/hud.tscn" id="4_7cxv3"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_hp8j3")
 
 [node name="PipeSpawner" parent="." instance=ExtResource("2_kw820")]
-position = Vector2(971, 311)
+position = Vector2(1035, 311)
 
 [node name="Ground" parent="." instance=ExtResource("3_dehay")]
 position = Vector2(505, 556)
@@ -15,3 +18,5 @@ scale = Vector2(5.435, 1)
 [node name="PlayerMarker" type="Marker2D" parent="."]
 position = Vector2(332, 299)
 gizmo_extents = 44.5
+
+[node name="HUD" parent="." instance=ExtResource("4_7cxv3")]
